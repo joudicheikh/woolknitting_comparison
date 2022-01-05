@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../static/welcome.css">
+    <title>Welcome</title>
+</head>
+<body>
+<div class="box">
+    <h1>Welcome to your Wool Knitting comparison portal!</h1>
+    <h3>Please enter the brand and the name of the wanted wool:</h3>
+    <div class="entries">
+        <form action="{{  url_for("first_page") }}" method="POST">
+          <label for="brand">Brand:</label>
+          <input type="text" name="first_query" placeholder="Enter brand"><br>
+          <label for="name">Name:</label>
+          <input type="text" name="second_query" placeholder="Enter name"><br>
+          <button type="submit" value="submit">Search</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>

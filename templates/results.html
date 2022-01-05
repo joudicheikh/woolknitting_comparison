@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../static/results.css">
+    <title>Results</title>
+</head>
+<body>
+<div class="box">
+    <div id="product_details" class="tabcontent">
+        <h1> Brand: {{ brand }}, Name: {{ product_name }}</h1>
+          <table id="products">
+                <tr>
+                  <th>Website</th>
+                  <th>Price</th>
+                  <th>Delivery</th>
+                  <th>Needle Size</th>
+                  <th>Composition</th>
+                </tr>
+                {% for product in products %}
+                <tr>
+                    <td>{{ product['website'] }}</td>
+                    <td>{{ product['price'] }}</td>
+                    <td>{{ product['delivery'] }}</td>
+                    <td>{{ product['needle_size'] }}</td>
+                    <td>{{ product['composition'] }}</td>
+                </tr>
+                {% endfor %}
+          </table>
+    </div>
+</div>
+</body>
+</html>
